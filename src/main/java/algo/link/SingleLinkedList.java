@@ -14,7 +14,6 @@ import lombok.Setter;
 public class SingleLinkedList {
 
     /**
-     * 1. 删除指定节点的下一节点
      * 2. 删除指定节点
      * 3. 删除头节点
      * 4. 删除尾节点
@@ -84,13 +83,29 @@ public class SingleLinkedList {
      */
     public Node findByValue(int value) {
         Node n = head;
-        if (head != null && value != head.data) {
+        if (n != null && value != n.data) {
             n = n.next;
         }
         return n;
     }
 
-    class Node {
+    /**
+     * 单链表反转
+     * @return
+     */
+    public Node reverse(Node node) {
+        Node n = node;
+        Node reverseHead = null;
+        while (n != null) {
+            Node next = n.next;
+            n.next = reverseHead;
+            reverseHead = n;
+            n = next;
+        }
+        return reverseHead;
+    }
+
+    static class Node {
         private int data;
         @Setter
         private Node next;
@@ -108,8 +123,4 @@ public class SingleLinkedList {
         }
     }
 
-    public static void main(String[] args) {
-        SingleLinkedList sll = new SingleLinkedList();
-        System.out.println(sll);
-    }
 }
