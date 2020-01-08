@@ -1,4 +1,4 @@
-package algo.letcode;
+package algo.leetcode.medium;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,17 +27,12 @@ public class ThreeSums {
 				int sum = nums[i] + nums[left] + nums[right];
 				if (sum == 0) {
 					rList.add(Arrays.asList(nums[i], nums[left], nums[right]));
-					while (left < right && nums[left] == nums[left++]) {
-						System.out.println(left);
-					}
-					while (left < right && nums[right] == nums[right--]);
+					while (left < right && nums[left] == nums[++left]);
+					while (left < right && nums[right] == nums[--right]);
 				} else if (sum > 0) right--;
 				else left++;
 			}
 		}
 		return rList;
 	}
-
-
-
 }

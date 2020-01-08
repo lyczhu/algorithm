@@ -1,8 +1,7 @@
-package algo.letcode;
+package algo.leetcode;
 
+import algo.leetcode.medium.ThreeSums;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ThreeSumsTest {
 
