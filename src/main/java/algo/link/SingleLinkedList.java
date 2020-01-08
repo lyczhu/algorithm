@@ -90,6 +90,23 @@ public class SingleLinkedList {
         return n;
     }
 
+    // 链表反转
+    public Node inverse(Node p) {
+        Node pre = null;
+        Node r = head;
+
+        System.out.println("z---" + r.data);
+        Node next = null;
+        while (r != null) {
+            next = r.next;
+
+            r.next = pre;
+            pre = r;
+            r = next;
+        }
+        return pre;
+    }
+
     class Node {
         private int data;
         @Setter
@@ -109,6 +126,7 @@ public class SingleLinkedList {
     }
 
     public static void main(String[] args) {
+        String s = "";
         SingleLinkedList sll = new SingleLinkedList();
         System.out.println(sll);
     }
