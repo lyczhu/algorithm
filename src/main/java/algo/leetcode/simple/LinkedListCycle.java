@@ -1,5 +1,7 @@
 package algo.leetcode.simple;
 
+import algo.leetcode.ListNode;
+
 /**
  * 给定一个链表，判断链表中是否有环。
  * <p>
@@ -35,20 +37,6 @@ public class LinkedListCycle {
             head = head.next;
         }
         return false;
-    }
-
-
-    /**
-     * Definition for singly-linked list.
-     */
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
     }
 
 }
