@@ -57,38 +57,71 @@ public class MergeTwoSortedList {
      * @return
      */
     public ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
-        ListNode head;
-        if (l1 == null) {
-            head = l2;
-        } else if (l2 == null) {
-            head = l1;
-        } else {
-            ListNode tail = head = l1;
-            ListNode pre = tail;
-            while (l2 != null && tail != null) {
-                if (l2.val > tail.val) {
-                    pre = tail;
-                    tail = tail.next;
-                } else {
-                    if (l2.val < pre.val) {
-                        ListNode l2Next = l2.next;
-                        l2.next = pre;
-                        head = tail = pre = l2;
-                        l2 = l2Next;
-                    } else {
-                        tail = pre.next;
-                        pre.next = l2;
-                        l2 = l2.next;
-                        pre = pre.next;
-                        pre.next = tail;
-                        tail = pre;
-                    }
+		ListNode head;
+		if (l1 == null) {
+			head = l2;
+		} else if (l2 == null) {
+			head = l1;
+		} else {
+			ListNode tail = head = l1;
+			ListNode pre = tail;
+			while (l2 != null && tail != null) {
+				if (l2.val > tail.val) {
+					pre = tail;
+					tail = tail.next;
+				} else {
+					if (l2.val < pre.val) {
+						ListNode l2Next = l2.next;
+						l2.next = pre;
+						head = tail = pre = l2;
+						l2 = l2Next;
+					} else {
+						tail = pre.next;
+						pre.next = l2;
+						l2 = l2.next;
+						pre = pre.next;
+						pre.next = tail;
+						tail = pre;
+					}
 
-                }
-            }
-            if (tail == null)
-                pre.next = l2;
-        }
-        return head;
-    }
+				}
+			}
+			if (tail == null)
+				pre.next = l2;
+		}
+		return head;
+	}
+
+	public ListNode mergeTwoLists3(ListNode l1, ListNode l2) {
+		ListNode head;
+		if (l1 == null) {
+			head = l2;
+		} else if (l2 == null) {
+			head = l1;
+		} else {
+			ListNode tail, pre;
+			if (l1.val <= l2.val) {
+				head = tail = pre = l1;
+			} else {
+				head = tail = pre = l2;
+				l2 = l1;
+			}
+			while (l2 != null && tail != null) {
+				if (l2.val > tail.val) {
+					pre = tail;
+					tail = tail.next;
+				} else {
+					tail = pre.next;
+					pre.next = l2;
+					l2 = l2.next;
+					pre = pre.next;
+					pre.next = tail;
+					tail = pre;
+				}
+			}
+			if (tail == null)
+				pre.next = l2;
+		}
+		return head;
+	}
 }
