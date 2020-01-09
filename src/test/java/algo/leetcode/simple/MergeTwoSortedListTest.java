@@ -12,8 +12,18 @@ class MergeTwoSortedListTest {
 		ListNode node1 = genNode(nums1);
 		ListNode node2 = genNode(nums2);
 		MergeTwoSortedList mtsl = new MergeTwoSortedList();
-		System.out.println(mtsl.mergeTwoLists(node1, node2));
 
+
+	}
+
+	@Test
+	void mergeTwoLists2() {
+		int[] nums1 = {1, 2, 4};
+		int[] nums2 = {1, 3, 4};
+		ListNode node1 = genNode(nums1);
+		ListNode node2 = genNode(nums2);
+		MergeTwoSortedList mtsl = new MergeTwoSortedList();
+		System.out.println(mtsl.mergeTwoLists2(node1, node2));
 	}
 
 	private ListNode genNode(int[] nums) {
