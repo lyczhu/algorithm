@@ -3,7 +3,7 @@ package algo.leetcode.simple;
 import algo.leetcode.ListNode;
 import org.junit.jupiter.api.Test;
 
-class MergeTwoSortedListTest {
+class Merge2SortedListTest {
 
 	@Test
 	void mergeTwoLists() {
@@ -11,7 +11,7 @@ class MergeTwoSortedListTest {
 		int[] nums2 = {1, 3, 4};
 		ListNode node1 = genNode(nums1);
 		ListNode node2 = genNode(nums2);
-		MergeTwoSortedList mtsl = new MergeTwoSortedList();
+		Merge2SortedList mtsl = new Merge2SortedList();
 
 
 	}
@@ -22,7 +22,7 @@ class MergeTwoSortedListTest {
 		int[] nums2 = {1};
 		ListNode node1 = genNode(nums1);
 		ListNode node2 = genNode(nums2);
-		MergeTwoSortedList mtsl = new MergeTwoSortedList();
+		Merge2SortedList mtsl = new Merge2SortedList();
 		System.out.println(mtsl.mergeTwoLists3(node1, node2));
 	}
 

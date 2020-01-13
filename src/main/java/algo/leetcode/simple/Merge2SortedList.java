@@ -17,8 +17,8 @@ import algo.leetcode.ListNode;
  * @date: 2020/1/9 14:00
  * @since: 1.0.0
  */
-public class MergeTwoSortedList {
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+public class Merge2SortedList {
+    public ListNode merge2Lists(ListNode l1, ListNode l2) {
         ListNode head = new ListNode(0);
         ListNode tail = head;
         while (l1 != null & l2 != null) {
@@ -35,16 +35,16 @@ public class MergeTwoSortedList {
         return head.next;
     }
 
-	public ListNode mergeTwoLists1(ListNode l1, ListNode l2) {
+	public ListNode merge2Lists1(ListNode l1, ListNode l2) {
 		if (l1 == null) {
 			return l2;
 		} else if (l2 == null) {
 			return l1;
 		} else if (l1.val <= l2.val) {
-			l1.next = mergeTwoLists1(l1.next, l2);
+			l1.next = merge2Lists1(l1.next, l2);
 			return l1;
 		} else {
-			l2.next = mergeTwoLists1(l1, l2.next);
+			l2.next = merge2Lists1(l1, l2.next);
 			return l2;
 		}
 	}
@@ -56,7 +56,7 @@ public class MergeTwoSortedList {
      * @param l2
      * @return
      */
-    public ListNode mergeTwoLists2(ListNode l1, ListNode l2) {
+    public ListNode merge2Lists2(ListNode l1, ListNode l2) {
 		ListNode head;
 		if (l1 == null) {
 			head = l2;

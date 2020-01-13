@@ -14,7 +14,7 @@ import java.util.List;
 public class ThreeSums {
 
 	public List<List<Integer>> threeSum(int[] nums) {
-		List<List<Integer>> rList = new ArrayList<>();
+		List<List<Integer>> rList = new ArrayList<>(nums.length);
 		if (nums == null || nums.length < 3) return rList;
 		Arrays.sort(nums);
 		int length = nums.length;
