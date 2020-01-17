@@ -1,4 +1,4 @@
-package algo.array;
+package algo.datastructure.array;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

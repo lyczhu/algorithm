@@ -1,4 +1,4 @@
-package algo.link;
+package algo.datastructure.link;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;

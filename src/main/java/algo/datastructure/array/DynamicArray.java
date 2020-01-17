@@ -1,4 +1,4 @@
-package algo.array;
+package algo.datastructure.array;
 
 import lombok.Data;
 
