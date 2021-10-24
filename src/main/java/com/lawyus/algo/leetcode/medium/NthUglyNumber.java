@@ -23,10 +23,24 @@ package com.lawyus.algo.leetcode.medium;
  * @since: 1.0.0
  */
 public class NthUglyNumber {
-	public int nthUglyNumber(int n) {
-		if (n == 1) return 1;
-		int[] nums = {2, 3, 5};
 
-		return 0;
+	/**
+	 * 三指针法
+	 * @param n
+	 * @return
+	 */
+	public int nthUglyNumber(int n) {
+		int[] uns = new int[n];
+		uns[0] = 1;
+		int p2 = 0, p3 = 0, p5 = 0;
+		int i = 1;
+		while (i < n) {
+			int result = Math.min(Math.min(uns[p2] * 2, uns[p3] * 3), uns[p5] * 5);
+			if (result == uns[p2] * 2) p2++;
+			if (result == uns[p3] * 3) p3++;
+			if (result == uns[p5] * 5) p5++;
+			uns[i++] = result;
+		}
+		return uns[n-1];
 	}
 }
