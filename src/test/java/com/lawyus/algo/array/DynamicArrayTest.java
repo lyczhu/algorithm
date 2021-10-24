@@ -1,8 +1,4 @@
-<<<<<<< HEAD:src/test/java/com/lawyus/algo/array/DynamicArrayTest.java
 package com.lawyus.algo.array;
-=======
-package algo.datastructure.array;
->>>>>>> 636cfc25a8ab7b070178c8211c92a1c0d52c03e0:src/test/java/com/lawyus/algo/datastructure/datastructure/array/DynamicArrayTest.java
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

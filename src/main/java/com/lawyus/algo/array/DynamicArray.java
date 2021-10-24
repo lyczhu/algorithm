@@ -1,8 +1,4 @@
-<<<<<<< HEAD:src/main/java/com/lawyus/algo/array/DynamicArray.java
 package com.lawyus.algo.array;
-=======
-package algo.datastructure.array;
->>>>>>> 636cfc25a8ab7b070178c8211c92a1c0d52c03e0:src/main/java/algo/datastructure/array/DynamicArray.java
 
 import lombok.Data;
 
